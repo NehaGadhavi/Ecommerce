@@ -20,7 +20,7 @@ function CartCard(Props: any) {
       setCount(temp);
       settotalConst((prev: any) => prev - 1);
     } else {
-      toast.error("Oops!, not enough quantity");
+      toast.error("Oops! not enough quantity.");
     }
   };
 

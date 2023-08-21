@@ -63,16 +63,16 @@ function Detail() {
       dispatch(purchaseRemover());
     } else {
       navigate("/login");
-      toast.error("please login to add product in cart");
+      toast.error("Please login to add product in cart.");
     }
   };
   const BuyHandler = () => {
     if (count === 0) {
-      toast.error("Please add quantity");
+      toast.error("Please add quantity.");
     } else {
       let role = localStorage.getItem("role");
       if (role !== "2") {
-        toast.error("you are not authorized only for uers!");
+        toast.error("You are not authorized!");
         return;
       }
       dispatch(purchaseRemover());

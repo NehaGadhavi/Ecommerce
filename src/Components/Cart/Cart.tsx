@@ -47,7 +47,7 @@ function Cart() {
     let role = localStorage.getItem("role");
     if(role !== '2'){
       navigate('/login');
-      toast.error('you are not authorized only for uers!')
+      toast.error('You are not authorized!')
       return
     }
 

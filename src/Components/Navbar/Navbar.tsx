@@ -22,7 +22,7 @@ function Navbar() {
   const logoutHandler = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("role");
-    toast.success("Logout Successfully");
+    toast.success("Logged out Successfully.");
     navigate("/home");
     dispatch(logoutSetter());
   };

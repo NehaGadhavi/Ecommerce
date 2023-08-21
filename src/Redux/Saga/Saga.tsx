@@ -65,7 +65,7 @@ export function* register(action: RegisterActionInterface) {
     );
 
     if (response) {
-      toast.success("user registered successfully");
+      toast.success("You have been registered successfully.");
       yield put({ type: "REGISTER_REDUCER" });
     } else {
     }
@@ -166,10 +166,10 @@ export function* addProduct(action: ActionAddProductInterface) {
       formData
     );
     if (response) {
-      toast.success("product added successfully");
+      toast.success("Product added successfully");
     }
   } catch (error) {
-    toast.error("product not added successfully");
+    toast.error("Product not added!");
   }
 }
 export function* updateProducts(action: ActionAddProductInterface) {
@@ -190,11 +190,11 @@ export function* updateProducts(action: ActionAddProductInterface) {
       formData
     );
     if (response) {
-      toast.success("product update successfully");
+      toast.success("Product updated successfully.");
       yield put({ type: "UPDATE_PRODUCT_REDUCER", payload: response.data });
     }
   } catch (error) {
-    toast.error("product not update");
+    toast.error("Product not updated!");
   }
 }
 
@@ -241,7 +241,7 @@ export function* addAdmin(action: any) {
       temp
     );
     if (response) {
-      toast.success("admin added successfully");
+      toast.success("Admin added successfully.");
     }
   } catch (error) {}
 }
@@ -277,7 +277,7 @@ export function* addToCart(action: any) {
       temp
     );
     if (response) {
-      toast.success("Item added to cart");
+      toast.success("Item added to cart.");
     }
   } catch (error) {}
 }
@@ -289,7 +289,7 @@ export function* getProductsInCarts() {
       `/products/carts`
     );
     if (response) {
-      toast.success("cart items fetched");
+      toast.success("Cart items fetched.");
       yield put({
         type: "SET_PRODUCTS_CART_REDUCER",
         payload: response.data.data,
@@ -306,7 +306,7 @@ export function* deleteUser(action: ActionNumberInterface) {
       `/auth/remove_user/${id}`
     );
     if (response) {
-      toast.success("removed user");
+      toast.success("User has been removed successfully.");
       yield put({ type: "DELETE_USER_REDUCER", payload: id });
     }
   } catch (error) {}
@@ -320,7 +320,7 @@ export function* deleteCartItem(action: ActionNumberInterface) {
       `/products/remove_from_cart/${id}`
     );
     if (response) {
-      toast.success("item removed from cart");
+      toast.success("Item removed from cart.");
       yield put({ type: "DELETE_CART_ITEM_REDUCER", payload: id });
     }
   } catch (error) {}

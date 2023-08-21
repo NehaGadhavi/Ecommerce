@@ -23,7 +23,7 @@ function AdminPanel() {
     if (role === "0" || role === "1") {
     } else {
       navigate("/login");
-      toast.error("you are not authorized to view this panel");
+      toast.error("You are not authorized to view this panel!");
     }
   }, []);
 
